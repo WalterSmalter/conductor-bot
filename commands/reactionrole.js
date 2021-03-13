@@ -25,7 +25,7 @@ module.exports = {
 
         var embed = new MessageEmbed()
             .setTitle('Role Selection')
-            .setDescription('Choose of the following roles:\n**If you react to too many roles at once it will not respond temporarily, give it a minute between each pick!**')
+            .setDescription('Choose of the following roles:\n\n**If you react to too many roles at once it will not respond temporarily, give it a minute between each pick!**')
             .addField("<:sexysaz:819559486133633024> - Sexy Saz", "For Saz players")
             .addField("<:DazzlingDJs:819558804541800488> - Dazzling DJs", "For Djs")
             .addField("<:DamnDarbukaDrumsDaff:819558901623029823> - Damn Darbuka/Drums/Daff", "For Drum players")
