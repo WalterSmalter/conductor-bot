@@ -36,9 +36,6 @@ client.on('message', message => {
     const command = args.shift().toLowerCase();
 
     switch(command){
-        case 'ping':
-            client.commands.get('ping').execute(message, args);
-            break;
         case 'reactionrole':
             client.commands.get('reactionrole').execute(message, args, client, Discord);
             break;
