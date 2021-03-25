@@ -21,9 +21,6 @@ client.once('ready', () =>{
 
 client.on('guildMemberAdd', guildMember =>{
     let welcomeRole = guildMember.guild.roles.cache.find(role => role.name === "Member");
-    let botRole = guildMember.guild.roles.cache.find(role => role.name ==="Trusty Bots");
-
-    if(guildMember == bot) return guildMember.roles.add(botRole);
 
     guildMember.roles.add(welcomeRole);
     guildMember.guild.channels.cache.get('819319923121192981').send(`Welcome <@${guildMember.user.id}> to the server!`)
