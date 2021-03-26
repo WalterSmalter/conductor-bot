@@ -35,8 +35,9 @@ client.on('message', message => {
     const args = message.content.slice(prefix.length).split(/ +/);
     const command = args.shift().toLowerCase();
 
-    if(client.commands.get(command).ownerOnly == true && !this.owners.includes(message.author.id)) return message.reply("only the owners can use this command.");
-
+    if(client.commands.get(command) == undefined) return;
+    if(client.commands.get(command).ownerOnly == true && !this.owners.includes(message.author.id)) return message.reply("only the owners can use this command.").catch(error);
+    
     switch(command){
         case 'help':
             client.commands.get('help').execute(message, args, client);
@@ -47,6 +48,8 @@ client.on('message', message => {
         case 'clear':
             client.commands.get('clear').execute(message, args);
             break;
+        case 'patchrole':
+            client.commands.get('patchrole').execute(client, message,args);
     }
 })
 
