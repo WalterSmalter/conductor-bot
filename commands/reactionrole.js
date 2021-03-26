@@ -5,8 +5,8 @@ var emojiObject = require("../emojis.json");
 module.exports = {
     name: 'reactionrole',
     description: 'Sets up a reaction role message.',
+    ownerOnly: true,
     async execute(message, args, client, Discord){
-        if(!owners.includes(message.author.id)) return message.reply("only the owners can use this command.");
 
         var emojiArray = emojiObject.emojis.split(",");
 
@@ -136,6 +136,7 @@ module.exports = {
                 }
             }else return;
         })
+        if(message.channel.id == '819327940953243648') return message.channel.send('**Scroll up to view the rules**');
     }
 
 }

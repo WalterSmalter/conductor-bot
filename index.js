@@ -1,7 +1,7 @@
 const Discord = require('discord.js');
 require('dotenv').config();
 const fs = require('fs');
-exports.owners = ['525681138501419028','614912190301863985']
+exports.owners = ['525681138501419028', '614912190301863985'];
 
 const client = new Discord.Client({partials: ["MESSAGE", "CHANNEL", "REACTION"]});
 client.commands = new Discord.Collection();
@@ -35,9 +35,11 @@ client.on('message', message => {
     const args = message.content.slice(prefix.length).split(/ +/);
     const command = args.shift().toLowerCase();
 
+    if(client.commands.get(command).ownerOnly == true && !this.owners.includes(message.author.id)) return message.reply("only the owners can use this command.");
+
     switch(command){
-        case 'ping':
-            client.commands.get('ping').execute(message, args);
+        case 'help':
+            client.commands.get('help').execute(message, args, client);
             break;
         case 'reactionrole':
             client.commands.get('reactionrole').execute(message, args, client, Discord);
