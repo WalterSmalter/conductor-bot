@@ -6,7 +6,7 @@ module.exports = {
     name: 'reactionrole',
     description: 'Sets up a reaction role message.',
     ownerOnly: true,
-    async execute(message, args, client, Discord){
+    async execute(client, message, args, Discord){
 
         var emojiArray = emojiObject.emojis.split(",");
 

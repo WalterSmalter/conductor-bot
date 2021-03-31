@@ -2,7 +2,7 @@ module.exports ={
     name: 'clear',
     description: 'Clears a certain number of messages.',
     ownerOnly: true,
-    async execute(message, args) {
+    async execute(client, message, args) {
         if(!args[0]) return message.reply('please specify the amount of messages that you want to delete.');
         if(isNaN(args[0])) return message.reply('please specify a real number.');
 
