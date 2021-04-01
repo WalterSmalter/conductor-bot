@@ -1,5 +1,5 @@
 const cooldowns = new Map();
-const { prefix, owners} = require('/Users/Karim Fayyad/Desktop/Programming Stuff/ConductorBot/config');
+const { prefix, owners} = require('../../config');
 
 module.exports = (Discord, client, message) =>{
     if(!message.content.startsWith(prefix) || message.author.bot) return;
