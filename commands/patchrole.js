@@ -3,6 +3,7 @@ const { MessageEmbed } = require("discord.js")
 module.exports ={
     name: 'patchrole',
     description: 'Sets up a reaction role message for change log.',
+    cooldown: 5,
     ownerOnly: true,
     async execute(client, message, args){
         const channel = message.channel.id;
