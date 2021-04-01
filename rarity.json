@@ -1,0 +1,17 @@
+{
+    "common": {
+        "time": 1200000
+    },
+    "uncommon": {
+        "time": 1800000
+    },
+    "rare": {
+        "time": 2400000
+    },
+    "epic": {
+        "time": 3000000
+    },
+    "legendary": {
+        "time": 3600000
+    }
+}

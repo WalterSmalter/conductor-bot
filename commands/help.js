@@ -3,7 +3,8 @@ const { MessageEmbed } = require('discord.js');
 module.exports= {
     name: "help",
     description: "Displays all available commands.",
-    ownerOnly: true,
+    cooldown: 10,
+    ownerOnly: false,
     execute(client, message, args){
         const commandArray = Array.from(client.commands);
         for(const array of commandArray){
