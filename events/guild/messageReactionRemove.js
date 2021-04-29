@@ -4,6 +4,8 @@ module.exports = async(reaction, user) =>{
     if(user.bot) return;
     if(!reaction.message.guild) return;
 
+    const channel = '825108365323272232';
+
     if(reaction.message.channel.id == channel) {
         switch(reaction.emoji.name){
             case "sexysaz": 
