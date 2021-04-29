@@ -1,4 +1,5 @@
-module.exports = async(client, reaction, user) =>{
+module.exports = async(client, Discord, message, reaction, user) =>{
+
     if(reaction.message.partial) await reaction.message.fetch();
     if(reaction.partial) await reaction.fetch();
     if(user.bot) return;
