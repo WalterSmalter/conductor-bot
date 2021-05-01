@@ -6,6 +6,7 @@ module.exports = client =>{
 
     var embed = new MessageEmbed()
         .setTitle('Role Selection')
+        .setColor(0x87ceeb)
         .setDescription('Choose of the following roles:\n\n**If you react to too many roles at once it will not respond temporarily, give it a minute between each pick!**');
 
     const emojis = {
@@ -39,7 +40,7 @@ module.exports = client =>{
         },
         KoolKanoun: {
             role: 'Kool Kanoun',
-            description: 'For Kanoun Players'
+            description: 'For Qanun Players'
         },
         SingersFromtheSoul: {
             role: 'Singers From the Soul',
