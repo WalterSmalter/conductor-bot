@@ -40,14 +40,14 @@ module.exports = client =>{
         },
         KoolKanoun: {
             role: 'Kool Kanoun',
-            description: 'For Kanoun Players'
+            description: 'For Qanun Players'
         },
         SingersFromtheSoul: {
             role: 'Singers From the Soul',
             description: 'For Singers'
         },
         Oudsuperior: {
-            role: 'Oud (Superior)',
+            role: 'Oud (superior)',
             description: 'For Oud Players'
         },
         ChillingCello: {

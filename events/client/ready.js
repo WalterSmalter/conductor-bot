@@ -4,7 +4,7 @@ const react = require('../../react');
 module.exports = (Discord, client) =>{
     console.log(`${client.user.tag} is now online you fuck...`);
 
-    client.user.setPresence({ status: 'online', activity:{name: "+help | v1.1.3 beta", type: "WATCHING"}});
+    client.user.setPresence({ status: 'online', activity:{name: "+help | v1.1.7 Beta", type: "WATCHING"}});
 
     react(client);
 
