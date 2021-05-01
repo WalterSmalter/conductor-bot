@@ -2,7 +2,7 @@ const firstMessage = require('./first-message');
 const { MessageEmbed } = require('discord.js');
 
 module.exports = client =>{
-    const channelID = '838062815306317834';
+    const channelID = '825108365323272232';
 
     var embed = new MessageEmbed()
         .setTitle('Role Selection')
