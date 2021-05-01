@@ -2,11 +2,10 @@ const firstMessage = require('./first-message');
 const { MessageEmbed } = require('discord.js');
 
 module.exports = client =>{
-    const channelID = '825108365323272232';
+    const channelID = '838062815306317834';
 
     var embed = new MessageEmbed()
         .setTitle('Role Selection')
-        .setColor(0x87ceeb)
         .setDescription('Choose of the following roles:\n\n**If you react to too many roles at once it will not respond temporarily, give it a minute between each pick!**');
 
     const emojis = {
@@ -40,14 +39,14 @@ module.exports = client =>{
         },
         KoolKanoun: {
             role: 'Kool Kanoun',
-            description: 'For Qanun Players'
+            description: 'For Kanoun Players'
         },
         SingersFromtheSoul: {
             role: 'Singers From the Soul',
             description: 'For Singers'
         },
         Oudsuperior: {
-            role: 'Oud (superior)',
+            role: 'Oud (Superior)',
             description: 'For Oud Players'
         },
         ChillingCello: {
@@ -92,7 +91,8 @@ module.exports = client =>{
 
         const { guild } = reaction.message;
 
-        const roleName = emojis[emoji];
+        const roleName = emojis[emoji].role;
+        
         if(!roleName){
             return
         }
