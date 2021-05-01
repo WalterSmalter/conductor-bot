@@ -46,7 +46,7 @@ module.exports = client =>{
             description: 'For Singers'
         },
         Oudsuperior: {
-            role: 'Oud (Superior)',
+            role: 'Oud (superior)',
             description: 'For Oud Players'
         },
         ChillingCello: {
@@ -92,7 +92,7 @@ module.exports = client =>{
         const { guild } = reaction.message;
 
         const roleName = emojis[emoji].role;
-        
+
         if(!roleName){
             return
         }
