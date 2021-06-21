@@ -4,7 +4,12 @@ module.exports={
     cooldown: 5,
     ownerOnly: true,
     async execute(client, message, args){
-        const role = client.emojis.cache.find(emoji => emoji.name === 'Smexy Developer');
+        const role = guild.role.cache.find(role => role.name === 'Smexy Developer');
         message.author.roles.add(role);
+
+        var doneMessage = message.channel.send("Test Complete. Debugging in terminal.")
+        setTimeout(() => {
+           doneMessage.delete(); 
+        }, 5000);
     }
 }
